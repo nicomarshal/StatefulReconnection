@@ -18,7 +18,7 @@ export function init(overlayElem) {
         // If no custom options were set, change the defaults
         if (options.maxRetries === 8 && options.retryIntervalMilliseconds === 20000) {
             options.retryIntervalMilliseconds = 1000;
-            options.maxRetries = 10 * 60; // 10 minutes
+            options.maxRetries = 60 * 60 * 24; // 24 horas
         }
 
         return origOnConnectionDown.call(this, options, error);
